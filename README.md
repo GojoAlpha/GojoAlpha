@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f3d33,100:0c1b17&height=260&section=header&text=GOJOALPHA&fontSize=52&fontColor=ffffff&animation=fadeIn&fontAlignY=32&desc=AI%20products%20%C2%B7%20data%20systems%20%C2%B7%20useful%20software&descAlignY=52&descSize=18" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1e3c72,50:2a5298,100:6dd5fa&height=260&section=header&text=GOJOALPHA&fontSize=52&fontColor=ffffff&animation=twinkling&fontAlignY=32&desc=AI%20products%20%C2%B7%20data%20systems%20%C2%B7%20useful%20software&descAlignY=52&descSize=18" width="100%" />
 </p>
 
 <h3 align="center">Full Stack Developer</h3>
