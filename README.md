@@ -1,5 +1,9 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1e3c72,50:2a5298,100:6dd5fa&height=260&section=header&text=GOJOALPHA&fontSize=52&fontColor=ffffff&animation=twinkling&fontAlignY=32&desc=AI%20products%20%C2%B7%20data%20systems%20%C2%B7%20useful%20software&descAlignY=52&descSize=18" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0b1d33,50:1e3c72,100:6dd5fa&height=200&section=header" width="100%" />
+</p>
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=42&duration=3000&pause=800&color=6DD5FA&center=true&vCenter=true&width=500&height=60&lines=GojoAlpha" />
 </p>
 
 <h3 align="center">Full Stack Developer</h3>
