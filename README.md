@@ -1,19 +1,16 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0b1d33,50:1e3c72,100:6dd5fa&height=200&section=header" width="100%" />
+  <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwMCIgaGVpZ2h0PSIzMDAiIHZpZXdCb3g9IjAgMCAxMDAwIDMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDcxMTBmIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBjMWIxNyIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0iZ2xvd0dyZWVuIiBjeD0iODAlIiBjeT0iMzAlIiByPSI1NSUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMGYzZDMzIiBzdG9wLW9wYWNpdHk9IjAuOSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwYzFiMTciIHN0b3Atb3BhY2l0eT0iMCIvPgogICAgPC9yYWRpYWxHcmFkaWVudD4KICAgIDxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iMjYiIGhlaWdodD0iMjYiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8cGF0aCBkPSJNIDI2IDAgTCAwIDAgMCAyNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMWMzMzJjIiBzdHJva2Utd2lkdGg9IjEiLz4KICAgIDwvcGF0dGVybj4KICA8L2RlZnM+CgogIDxyZWN0IHdpZHRoPSIxMDAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0idXJsKCNiZykiLz4KICA8cmVjdCB4PSI2MDAiIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSJ1cmwoI2dyaWQpIiBvcGFjaXR5PSIwLjYiLz4KICA8cmVjdCB3aWR0aD0iMTAwMCIgaGVpZ2h0PSIzMDAiIGZpbGw9InVybCgjZ2xvd0dyZWVuKSIvPgoKICA8dGV4dCB4PSI2MCIgeT0iNzAiIGZvbnQtZmFtaWx5PSJDb3VyaWVyIE5ldywgbW9ub3NwYWNlIiBmb250LXNpemU9IjE0IiBsZXR0ZXItc3BhY2luZz0iMyIgZmlsbD0iIzhmZTM2YSI+R09KT0FMUEhBIC8gU1lTVEVNUyBMQUI8L3RleHQ+CgogIDx0ZXh0IHg9IjYwIiB5PSIxMjUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0MiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiNmMmY2ZjQiPkdPSk9BTFBIQTwvdGV4dD4KCiAgPHRleHQgeD0iNjAiIHk9IjE3MCIgZm9udC1mYW1pbHk9IkNvdXJpZXIgTmV3LCBtb25vc3BhY2UiIGZvbnQtc2l6ZT0iMTUiIGZpbGw9IiM5ZGIzYWQiPmNvZGUgLiBzeXN0ZW1zIC4gdXNlZnVsIHNvZnR3YXJlPC90ZXh0PgoKICA8cmVjdCB4PSI2MCIgeT0iMjAwIiB3aWR0aD0iMTUwIiBoZWlnaHQ9IjMwIiByeD0iMTUiIGZpbGw9IiNhN2ZmNGQiLz4KICA8dGV4dCB4PSIxMzUiIHk9IjIyMCIgZm9udC1mYW1pbHk9IkNvdXJpZXIgTmV3LCBtb25vc3BhY2UiIGZvbnQtc2l6ZT0iMTIiIGZvbnQtd2VpZ2h0PSJib2xkIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMGMxYjE3Ij5CVUlMRCAvIFNISVAgLyBMRUFSTjwvdGV4dD4KCiAgPHRleHQgeD0iNjAiIHk9IjI3MCIgZm9udC1mYW1pbHk9IkNvdXJpZXIgTmV3LCBtb25vc3BhY2UiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM1YTcxNjgiPkNPREUgLyBEQVRBIC8gU1lTVEVNUyAvLyAyMDI2PC90ZXh0PgoKICA8cGF0aCBkPSJNIDAgMjQwIFEgMjUwIDE4MCA1MDAgMjIwIFQgMTAwMCAxOTAiIHN0cm9rZT0iI2E3ZmY0ZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGZpbGw9Im5vbmUiIG9wYWNpdHk9IjAuNSIvPgoKICA8bGluZSB4MT0iNzAwIiB5MT0iOTAiIHgyPSI4MDAiIHkyPSIxMzAiIHN0cm9rZT0iIzZmZTBjOCIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KICA8bGluZSB4MT0iODAwIiB5MT0iMTMwIiB4Mj0iODMwIiB5Mj0iMTgwIiBzdHJva2U9IiNhN2ZmNGQiIHN0cm9rZS13aWR0aD0iMS4yIi8+CiAgPGxpbmUgeDE9IjcwMCIgeTE9IjkwIiB4Mj0iODMwIiB5Mj0iMTgwIiBzdHJva2U9IiNhN2ZmNGQiIHN0cm9rZS13aWR0aD0iMS4yIi8+CiAgPGNpcmNsZSBjeD0iNzAwIiBjeT0iOTAiIHI9IjUiIGZpbGw9IiNhN2ZmNGQiLz4KICA8Y2lyY2xlIGN4PSI4MDAiIGN5PSIxMzAiIHI9IjUiIGZpbGw9IiM2ZmUwYzgiLz4KICA8Y2lyY2xlIGN4PSI4MzAiIGN5PSIxODAiIHI9IjUiIGZpbGw9IiNhN2ZmNGQiLz4KPC9zdmc+Cg==" width="100%" />
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=42&duration=3000&pause=800&color=6DD5FA&center=true&vCenter=true&width=500&height=60&lines=GojoAlpha" />
+  <img src="https://img.shields.io/badge/PONG--GAME-000000?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/PUBLIC-6fe0c8?style=for-the-badge" />
 </p>
 
-<h3 align="center">Full Stack Developer</h3>
-<p align="center">Building the future, one commit at a time</p>
-
----
-
-## About
-
-Full stack developer focused on building clean, reliable software. Comfortable across the stack — from frontend interfaces to backend systems.
+<p align="center">
+  <img src="https://img.shields.io/badge/AXIORA-000000?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/PRIVATE-8e44ad?style=for-the-badge" />
+</p>
 
 ---
 
@@ -53,11 +50,30 @@ Private project built with TypeScript.
 
 ---
 
+## pong-game
+
+A simple Pong game featuring player vs computer gameplay, built with HTML, CSS and JavaScript.
+
+```
+git clone https://github.com/GojoAlpha/pong-game
+open index.html
+```
+
+[github.com/GojoAlpha/pong-game](https://github.com/GojoAlpha/pong-game)
+
+---
+
+## nuera-agent
+
+A TypeScript based project focused on building reliable, structured agent behavior.
+
+[github.com/GojoAlpha/nuera-agent](https://github.com/GojoAlpha/nuera-agent)
+
+---
+
 ## Tech Stack
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=python,js,ts,html,css,react,nodejs,git,github" />
-</p>
+Python · JavaScript · TypeScript · HTML · CSS · React · Node.js · Git
 
 ---
 
@@ -82,8 +98,4 @@ Private project built with TypeScript.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/GojoAlpha/GojoAlpha/output/github-contribution-grid-snake.svg" alt="contribution snake" />
-</p>
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=GojoAlpha&color=blueviolet&style=flat" alt="Profile Views" />
 </p>
