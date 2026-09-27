@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/GojoAlpha/GojoAlpha/main/banner.svg" width="100%" />
+  <img src="https://cdn.jsdelivr.net/gh/GojoAlpha/GojoAlpha@main/banner.svg" width="100%" />
 </p>
 
 <p align="center">
