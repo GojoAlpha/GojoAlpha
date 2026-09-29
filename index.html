@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GojoAlpha — Full Stack Developer</title>
+<style>
+  :root{
+    --bg:#000000;
+    --yellow:#f4ff2e;
+    --green:#7dff4d;
+    --green-soft:#c8ff6d;
+    --text:#e8ffe6;
+    --muted:#8fae90;
+    --mono:'Courier New', monospace;
+    --sans:Arial, Helvetica, sans-serif;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    overflow-x:hidden;
+  }
+  canvas#bgcanvas{
+    position:fixed; inset:0; width:100%; height:100%; z-index:0; opacity:0.55;
+  }
+  .wrap{position:relative; z-index:1;}
+
+  header{
+    min-height:92vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:6vh 8vw;
+    position:relative;
+  }
+  .eyebrow{
+    font-family:var(--mono);
+    color:var(--green);
+    font-size:0.85rem;
+    letter-spacing:0.15em;
+    margin-bottom:1.2rem;
+  }
+  h1{
+    font-family:var(--mono);
+    font-size:clamp(2.6rem, 9vw, 6rem);
+    font-weight:700;
+    line-height:0.98;
+    background:linear-gradient(90deg,var(--yellow),var(--green));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    display:inline-block;
+    border-right:3px solid var(--yellow);
+    white-space:nowrap;
+    overflow:hidden;
+    width:0;
+    animation:type 1.8s steps(9) forwards, blink 0.8s step-end infinite;
+  }
+  @keyframes type{ to{ width:9.3ch; } }
+  @keyframes blink{ 50%{ border-color:transparent; } }
+
+  .role{
+    margin-top:1.4rem;
+    font-size:clamp(1.1rem,2.4vw,1.5rem);
+    color:var(--text);
+    max-width:34ch;
+  }
+  .tagline{
+    margin-top:0.6rem;
+    color:var(--muted);
+    font-family:var(--mono);
+    font-size:0.95rem;
+  }
+  .cta-row{
+    margin-top:2.4rem;
+    display:flex;
+    gap:1rem;
+    flex-wrap:wrap;
+  }
+  .btn{
+    font-family:var(--mono);
+    font-size:0.85rem;
+    letter-spacing:0.05em;
+    padding:0.85rem 1.6rem;
+    border:1px solid var(--green);
+    color:var(--green);
+    text-decoration:none;
+    transition:background 0.2s ease, color 0.2s ease;
+  }
+  .btn:hover{ background:var(--green); color:#000; }
+  .btn.solid{ background:var(--yellow); border-color:var(--yellow); color:#000; }
+  .btn.solid:hover{ background:transparent; color:var(--yellow); }
+
+  section{
+    padding:10vh 8vw;
+    position:relative;
+    border-top:1px solid #12241a;
+  }
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    gap:1rem;
+    margin-bottom:3rem;
+  }
+  .section-num{
+    font-family:var(--mono);
+    color:var(--green);
+    font-size:0.85rem;
+  }
+  h2{
+    font-family:var(--mono);
+    font-size:clamp(1.6rem,3.4vw,2.4rem);
+    color:var(--text);
+  }
+
+  #about p{
+    max-width:62ch;
+    font-size:1.05rem;
+    line-height:1.7;
+    color:#cfe9d0;
+  }
+
+  .work-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:1.5px;
+    background:#12241a;
+  }
+  .work-card{
+    background:#000;
+    padding:2.2rem;
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+    min-height:260px;
+  }
+  .work-card h3{
+    font-family:var(--mono);
+    font-size:1.3rem;
+    color:var(--yellow);
+  }
+  .work-card p{
+    color:var(--muted);
+    font-size:0.95rem;
+    line-height:1.6;
+    flex-grow:1;
+  }
+  .tag-row{ display:flex; gap:0.5rem; flex-wrap:wrap; }
+  .tag{
+    font-family:var(--mono);
+    font-size:0.7rem;
+    letter-spacing:0.05em;
+    padding:0.25rem 0.6rem;
+    border:1px solid #274035;
+    color:var(--green-soft);
+  }
+  .work-link{
+    font-family:var(--mono);
+    font-size:0.85rem;
+    color:var(--green);
+    text-decoration:none;
+    border-bottom:1px solid var(--green);
+    width:fit-content;
+  }
+  .status{
+    font-family:var(--mono);
+    font-size:0.7rem;
+    letter-spacing:0.05em;
+    color:#5a7168;
+  }
+
+  .stack-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.8rem 1.6rem;
+    font-family:var(--mono);
+    font-size:1rem;
+    color:var(--text);
+  }
+  .stack-list span{ color:var(--muted); }
+
+  footer{
+    padding:8vh 8vw;
+    border-top:1px solid #12241a;
+    display:flex;
+    flex-direction:column;
+    gap:1.2rem;
+  }
+  footer .big-link{
+    font-family:var(--mono);
+    font-size:clamp(1.3rem,3vw,1.8rem);
+    color:var(--yellow);
+    text-decoration:none;
+  }
+  footer .foot-meta{
+    font-family:var(--mono);
+    font-size:0.75rem;
+    color:#5a7168;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    h1{ animation:none; width:9.3ch; border-right:none; }
+  }
+</style>
+</head>
+<body>
+
+<canvas id="bgcanvas"></canvas>
+
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">SYSTEMS LAB // 2026</div>
+    <h1>GOJOALPHA</h1>
+    <p class="role">Full stack developer building clean, reliable software.</p>
+    <p class="tagline">Building the future, one commit at a time</p>
+    <div class="cta-row">
+      <a class="btn solid" href="https://axiora-intelligence.vercel.app" target="_blank" rel="noopener">Visit Axiora →</a>
+      <a class="btn" href="https://github.com/GojoAlpha" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <h2>About</h2>
+    </div>
+    <p>Full stack developer focused on building clean, reliable software — from interactive frontend experiences to backend systems and AI-driven products. Comfortable moving across the stack, from UI details to the systems underneath.</p>
+  </section>
+
+  <section id="work">
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <h2>Selected Work</h2>
+    </div>
+    <div class="work-grid">
+
+      <div class="work-card">
+        <h3>pong-game</h3>
+        <p>A simple Pong game with HTML, CSS, and JavaScript featuring player vs computer gameplay.</p>
+        <div class="tag-row">
+          <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JAVASCRIPT</span>
+        </div>
+        <span class="status">PUBLIC</span>
+        <a class="work-link" href="https://github.com/GojoAlpha/pong-game" target="_blank" rel="noopener">View repo →</a>
+      </div>
+
+      <div class="work-card">
+        <h3>Axiora</h3>
+        <p>Private project built with JavaScript, live at axiora-intelligence.vercel.app.</p>
+        <div class="tag-row">
+          <span class="tag">JAVASCRIPT</span>
+        </div>
+        <span class="status">PRIVATE</span>
+        <a class="work-link" href="https://axiora-intelligence.vercel.app" target="_blank" rel="noopener">Visit live site →</a>
+      </div>
+
+      <div class="work-card">
+        <h3>nuera-agent</h3>
+        <p>A TypeScript based project focused on building reliable, structured agent behavior.</p>
+        <div class="tag-row">
+          <span class="tag">TYPESCRIPT</span>
+        </div>
+        <span class="status">PRIVATE</span>
+        <a class="work-link" href="https://github.com/GojoAlpha/nuera-agent" target="_blank" rel="noopener">View repo →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="stack">
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <h2>Tech Stack</h2>
+    </div>
+    <div class="stack-list">
+      <span>Python</span><span>·</span>
+      <span>JavaScript</span><span>·</span>
+      <span>TypeScript</span><span>·</span>
+      <span>HTML</span><span>·</span>
+      <span>CSS</span><span>·</span>
+      <span>React</span><span>·</span>
+      <span>Node.js</span><span>·</span>
+      <span>Git</span>
+    </div>
+  </section>
+
+  <footer>
+    <a class="big-link" href="https://axiora-intelligence.vercel.app" target="_blank" rel="noopener">axiora-intelligence.vercel.app →</a>
+    <span class="foot-meta">GOJOALPHA / SYSTEMS LAB / 2026</span>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var canvas = document.getElementById('bgcanvas');
+  var ctx = canvas.getContext('2d');
+  var w, h;
+  function resize(){
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = document.body.scrollHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  // tesseract clusters
+  function makeCluster(x,y,size,speed,c1,c2){
+    return {x:x,y:y,size:size,angle1:Math.random()*360,angle2:Math.random()*360,
+      speed1:speed*0.6,speed2:-speed*0.9,c1:c1,c2:c2};
+  }
+  var clusters = [];
+  var colorsA = ['#f4ff2e','#7dff4d'];
+  var count = Math.max(6, Math.floor(w/220));
+  for(var i=0;i<count;i++){
+    var x = Math.random()*w;
+    var y = Math.random()*h;
+    var size = 30+Math.random()*70;
+    var speed = 0.15+Math.random()*0.4;
+    clusters.push(makeCluster(x,y,size,speed,colorsA[0],colorsA[1]));
+  }
+
+  function drawSquareRot(cx,cy,size,angle,color,alpha){
+    ctx.save();
+    ctx.translate(cx,cy);
+    ctx.rotate(angle*Math.PI/180);
+    ctx.strokeStyle = color;
+    ctx.globalAlpha = alpha;
+    ctx.lineWidth = 1;
+    ctx.strokeRect(-size,-size,size*2,size*2);
+    ctx.restore();
+  }
+
+  function drawCluster(cl){
+    drawSquareRot(cl.x,cl.y,cl.size,cl.angle1,cl.c1,0.35);
+    drawSquareRot(cl.x,cl.y,cl.size*0.45,cl.angle2,cl.c2,0.4);
+    ctx.save();
+    ctx.globalAlpha = 0.5;
+    ctx.fillStyle = cl.c1;
+    ctx.beginPath();
+    ctx.arc(cl.x,cl.y,2.5,0,Math.PI*2);
+    ctx.fill();
+    ctx.restore();
+  }
+
+  // snow
+  var flakes = [];
+  var flakeCount = Math.max(40, Math.floor(w/16));
+  for(var j=0;j<flakeCount;j++){
+    flakes.push({
+      x:Math.random()*w,
+      y:Math.random()*h,
+      r:1+Math.random()*2.2,
+      speed:0.3+Math.random()*0.8,
+      drift:Math.random()*0.6-0.3
+    });
+  }
+
+  function loop(){
+    ctx.clearRect(0,0,w,h);
+
+    clusters.forEach(function(cl){
+      cl.angle1 += cl.speed1;
+      cl.angle2 += cl.speed2;
+      drawCluster(cl);
+    });
+
+    ctx.fillStyle = '#eaffef';
+    flakes.forEach(function(f){
+      ctx.globalAlpha = 0.8;
+      ctx.beginPath();
+      ctx.arc(f.x,f.y,f.r,0,Math.PI*2);
+      ctx.fill();
+      f.y += f.speed;
+      f.x += f.drift;
+      if(f.y > h){ f.y = -5; f.x = Math.random()*w; }
+    });
+    ctx.globalAlpha = 1;
+
+    if(!reduce) requestAnimationFrame(loop);
+  }
+  loop();
+})();
+</script>
+
+</body>
+</html>
