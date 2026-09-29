@@ -2,15 +2,36 @@
   <img src="https://cdn.jsdelivr.net/gh/GojoAlpha/GojoAlpha@main/banner.svg" width="100%" />
 </p>
 
+## Profile
+
+<p align="center">
+  <img src="https://cdn.jsdelivr.net/gh/GojoAlpha/GojoAlpha@main/banner.svg" width="100%" />
+</p>
+
+<h3 align="center">Full Stack Developer</h3>
+<p align="center">Building the future, one commit at a time</p>
+
+<p align="center">
+  <a href="https://axiora-intelligence.vercel.app"><img src="https://img.shields.io/badge/WEBSITE-axiora--intelligence.vercel.app-7c3aed?style=for-the-badge" /></a>
+</p>
+
+---
+
+## About
+
+Full stack developer focused on building clean, reliable software — from interactive frontend experiences to backend systems and AI-driven products.
+
+---
+
 <p align="center">
   <img src="https://img.shields.io/badge/PONG--GAME-000000?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/PUBLIC-6fe0c8?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/PUBLIC-b16dff?style=for-the-badge" />
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/AXIORA-000000?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/PRIVATE-8e44ad?style=for-the-badge" />
-  <a href="https://axiora-intelligence.vercel.app"><img src="https://img.shields.io/badge/LIVE-axiora--intelligence.vercel.app-6dd5fa?style=for-the-badge" /></a>
+  <img src="https://img.shields.io/badge/PRIVATE-4c1d95?style=for-the-badge" />
+  <a href="https://axiora-intelligence.vercel.app"><img src="https://img.shields.io/badge/LIVE-axiora--intelligence.vercel.app-7c3aed?style=for-the-badge" /></a>
 </p>
 
 ---
@@ -83,8 +104,8 @@ Python · JavaScript · TypeScript · HTML · CSS · React · Node.js · Git
 ## GitHub Stats
 
 <p align="center">
-  <img height="165em" src="https://github-readme-stats.vercel.app/api?username=GojoAlpha&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" />
-  <img height="165em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=GojoAlpha&layout=compact&theme=tokyonight&hide_border=true" />
+  <img height="165em" src="https://github-readme-stats.vercel.app/api?username=GojoAlpha&show_icons=true&theme=radical&hide_border=true&count_private=true" />
+  <img height="165em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=GojoAlpha&layout=compact&theme=radical&hide_border=true" />
 </p>
 
 ---
